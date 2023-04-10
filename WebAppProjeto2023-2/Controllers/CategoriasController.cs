@@ -23,5 +23,10 @@ namespace WebAppProjeto2023_2.Controllers
         {
             return View(categorias);
         }
+        // GET: Categorias
+        public ActionResult Create()
+        {
+            return View();
+        }
     }
 }
