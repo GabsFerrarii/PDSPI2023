@@ -1,29 +1,42 @@
-﻿@model IEnumerable<WebAppProjeto2023_2.Models.Fabricante>
+﻿@model WebAppProjeto2023_2.Models.Home
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewBag.Title = "Home";
+    ViewBag.Title = "Loja Virtual";
 }
 
-<h2>Index</h2>
+<div>
+    <h2>Fabricantes</h2>
+    <table class="table table-striped">
+        <tr>
+            <th scope="col">Nome dos Fabricantes</th>
+        </tr>
+            @foreach (var item in Model.fabricantes)
+            {
+            <tr>
+                <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+            </tr>
+            }
+    </table>
+</div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Nome)
-        </th>
-        <th></th>
-    </tr>
+<div>
+    <h2>Categorias</h2>
+    <table class="table table-striped">
+        <tr class="table-primary">
+            <th scope="col">Nome das Categorias</th>
+        </tr>
+        @foreach (var item in Model.categorias)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nome)
-        </td>
-    </tr>
-}
+            </tr>
+        }
+    </table>
+</div>
 
-</table>

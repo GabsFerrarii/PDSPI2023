@@ -13,7 +13,10 @@ namespace WebAppProjeto2023_2.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View(context.Fabricantes.OrderBy(c => c.Nome));
+            Home h = new Home();
+            h.fabricantes = context.Fabricantes.OrderBy(c => c.FabricanteId);
+            h.categorias = context.Categorias.OrderBy(c => c.CategoriaId);
+            return View(h);
         }
     }
 }
