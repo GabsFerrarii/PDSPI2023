@@ -11,14 +11,14 @@
         <tr>
             <th scope="col">Nome dos Fabricantes</th>
         </tr>
-            @foreach (var item in Model.fabricantes)
-            {
+        @foreach (var item in Model.fabricantes)
+        {
             <tr>
                 <td>
-                        @Html.DisplayFor(modelItem => item.Nome)
+                    @Html.ActionLink(item.Nome, "Index", "Home", new { FabricanteId = item.FabricanteId }, null)
                 </td>
             </tr>
-            }
+        }
     </table>
 </div>
 
@@ -32,7 +32,7 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Nome)
+                    @Html.ActionLink(item.Nome, "Index", "Home", new { CategoriaId = item.CategoriaId }, null)
                 </td>
 
             </tr>
@@ -40,3 +40,18 @@
     </table>
 </div>
 
+@if ((Model.produtos != null) && (Model.filtro == "Fabricante"))
+{
+    <div class="alert alert-success" role="alert">
+        <p>Produtos por Fabricante</p>
+        @Html.Partial("~/Views/Produtos/_PorFabricante.cshtml", Model.produtos.ToList())
+    </div>
+}
+
+@if ((Model.produtos != null) && (Model.filtro == "Categoria"))
+{
+    <div class="alert alert-success" role="alert">
+        <p>Produtos por Categoria</p>
+        @Html.Partial("~/Views/Produtos/_PorCategoria.cshtml", Model.produtos.ToList())
+    </div>
+}
