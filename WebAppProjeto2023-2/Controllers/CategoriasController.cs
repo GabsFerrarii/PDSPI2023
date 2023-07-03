@@ -6,6 +6,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using WebAppProjeto2023_2.Models;
+using Modelo.Tabelas;
+using Modelo.Cadastros;
 
 namespace WebAppProjeto2023_2.Controllers
 {
