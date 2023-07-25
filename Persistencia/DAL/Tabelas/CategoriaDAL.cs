@@ -14,11 +14,11 @@ namespace Persistencia.DAL.Tabelas
         private EFContext context = new EFContext();
         public IQueryable<Categoria> ObterCategoriasClassificadasPorNome()
         {
-            return context.Categorias.OrderBy(b => b.Nome);
+            return context.Categorias.OrderBy(b => b.Nome).Include(c => c.Produtos);
         }
         public Categoria ObterCategoriaPorId(long id)
         {
-            return context.Categorias.Where(c => c.CategoriaId == id).First();
+            return context.Categorias.Where(c => c.CategoriaId == id).Include("Produtos.Fabricante").First();
         }
         public void GravarCategoria(Categoria categoria)
         {
