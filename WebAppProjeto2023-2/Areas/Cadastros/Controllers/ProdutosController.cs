@@ -12,7 +12,7 @@ using Modelo.Tabelas;
 using Servico.Cadastros;
 using Servico.Tabelas;
 
-namespace WebAppProjeto2023_2.Controllers
+namespace WebAppProjeto2023_2.Areas.Cadastros.Controllers
 {
     public class ProdutosController : Controller
     {
@@ -68,7 +68,14 @@ namespace WebAppProjeto2023_2.Controllers
         [HttpPost]
         public ActionResult Create(Produto produto)
         {
-            return GravarProduto(produto);
+            try
+            {
+                return GravarProduto(produto);
+            }
+            catch
+            {
+                return View();
+            }
         }
 
         // GET: Produtos/Edit/5
@@ -127,10 +134,12 @@ namespace WebAppProjeto2023_2.Controllers
                     produtoServico.GravarProduto(produto);
                     return RedirectToAction("Index");
                 }
+                PopularViewBag();
                 return View(produto);
             }
             catch
             {
+                PopularViewBag();
                 return View(produto);
             }
         }

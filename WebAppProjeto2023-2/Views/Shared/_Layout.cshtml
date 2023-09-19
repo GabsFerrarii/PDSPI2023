@@ -26,13 +26,13 @@
                         @Html.ActionLink("Home", "Index", "Home")
                     </li>
                     <li id="liCategorias" role="presentation">
-                        @Html.ActionLink("Categorias", "Index", "Categorias")
+                        @Html.ActionLink("Categorias", "Index", "Categorias", new { Areas = "Tabelas" }, null)
                     </li>
                     <li id="liFabricantes" role="presentation">
-                        @Html.ActionLink("Fabricantes", "Index", "Fabricantes")
+                        @Html.ActionLink("Fabricantes", "Index", "Fabricantes", new { Areas = "Cadastros" }, null)
                     </li>
                     <li id="liProdutos" role="presentation">
-                        @Html.ActionLink("Produtos", "Index", "Produtos")
+                        @Html.ActionLink("Produtos", "Index", "Produtos", new { Areas = "Cadastros" }, null)
                     </li>
                 </ul>
             </div>

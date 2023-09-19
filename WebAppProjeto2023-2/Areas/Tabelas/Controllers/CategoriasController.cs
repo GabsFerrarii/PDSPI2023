@@ -10,7 +10,7 @@ using Modelo.Tabelas;
 using Modelo.Cadastros;
 using Servico.Tabelas;
 
-namespace WebAppProjeto2023_2.Controllers
+namespace WebAppProjeto2023_2.Areas.Tabelas.Controllers
 {
     public class CategoriasController : Controller
     {
