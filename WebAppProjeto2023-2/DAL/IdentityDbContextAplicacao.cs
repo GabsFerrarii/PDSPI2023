@@ -25,7 +25,5 @@ namespace WebAppProjeto2023_2.DAL
         {
 
         }
-
-        public System.Data.Entity.DbSet<WebAppProjeto2023_2.Areas.Seguranca.Data.Usuario> Usuarios { get; set; }
     }
 }

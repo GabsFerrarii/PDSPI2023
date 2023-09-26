@@ -9,7 +9,7 @@ using Owin;
 using WebAppProjeto2023_2.DAL;
 using WebAppProjeto2023_2.Infraestrutura;
 
-namespace WebAppProjeto2023_2.App_Start
+namespace WebAppProjeto2023_2
 {
     public class IdentityConfig
     {
