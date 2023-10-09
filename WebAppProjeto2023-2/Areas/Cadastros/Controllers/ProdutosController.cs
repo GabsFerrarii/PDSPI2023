@@ -21,6 +21,7 @@ namespace WebAppProjeto2023_2.Areas.Cadastros.Controllers
         private CategoriaServico categoriaServico = new CategoriaServico();
         private FabricanteServico fabricanteServico = new FabricanteServico();
         // GET: Produtos
+        [Authorize]
         public ActionResult Index()
         {
             //var produtos = context.Produtos.Include(c => c.Categoria).Include(f => f.Fabricante).OrderBy(n => n.Nome);

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"
@@ -19,28 +19,21 @@
                 </h1>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-3 col-md-3 bg-success">
-                <ul class="nav nav-pills nav-stacked">
-                    <li id="liHome" role="presentation" class="active">
-                        @Html.ActionLink("Home", "Index", "Home")
-                    </li>
-                    <li id="liCategorias" role="presentation">
-                        @Html.ActionLink("Categorias", "Index", "Categorias", new { Areas = "Tabelas" }, null)
-                    </li>
-                    <li id="liFabricantes" role="presentation">
-                        @Html.ActionLink("Fabricantes", "Index", "Fabricantes", new { Areas = "Cadastros" }, null)
-                    </li>
-                    <li id="liProdutos" role="presentation">
-                        @Html.ActionLink("Produtos", "Index", "Produtos", new { Areas = "Cadastros" }, null)
-                    </li>
-                </ul>
-            </div>
-            <div class="col-xs-9 col-md-9">
-                <br />
-                @RenderBody()
-            </div>
-        </div> <br />
+            <div class="row">
+                <div class="col-xs-3 col-md-3 bg-success">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li id="liHome" role="presentation" class="active">@Html.ActionLink("Home", "Index", "Home", new { Area = "" }, null)</li>
+                        <li id="liCategorias" role="presentation">@Html.ActionLink("Categorias", "Index", "Categorias", new { Area = "Tabelas" }, null)</li>
+                        <li id="liFabricantes" role="presentation">@Html.ActionLink("Fabricantes", "Index", "Fabricantes", new { Area = "Cadastros" }, null)</li>
+                        <li id="liProdutos" role="presentation">@Html.ActionLink("Produtos", "Index", "Produtos", new { Area = "Cadastros" }, null)</li>
+                        <li id="liUsuarios" role="presentation">@Html.ActionLink("Usuários", "Index", "Admin", new { area = "Seguranca" }, null)</li>
+                    </ul>
+                </div>
+                <div class="col-xs-9 col-md-9">
+                    <br />
+                    @RenderBody()
+                </div>
+            </div> <br />
         <div class="row">
             <div class="col-xs-12 col-md-12 bg-danger">
                 <small>Layout com Bootstrap</small>
@@ -49,6 +42,8 @@
     </div>
     <script src="@Url.Content("~/scripts/jquery-1.9.1.js")"></script>
     <script src="@Url.Content("~/scripts/bootstrap.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate-1.9.1.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate-1.9.1.unobtrusive.js")"></script>
     @RenderSection("ScriptPage", false)
 </body>
 </html>
