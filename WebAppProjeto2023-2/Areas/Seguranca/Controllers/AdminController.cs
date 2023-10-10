@@ -23,6 +23,7 @@ namespace WebAppProjeto2023_2.Areas.Seguranca.Controllers
 
             }
         }
+        [Authorize(Roles = "Administradores")]
         // GET: Seguranca/Admin
         public ActionResult Index()
         {
