@@ -11,7 +11,7 @@ namespace Modelo.Cadastros
     public class Produto
     {
         [DisplayName("Id")]
-        public long ProdutoId { get; set; }
+        public long? ProdutoId { get; set; }
         [StringLength(100, ErrorMessage = "O nome do produto precisa ter no mínimo 10 caracteres", MinimumLength = 10)]
         [Required(ErrorMessage = "Informe o nome do produto")]
         public string Nome { get; set; }

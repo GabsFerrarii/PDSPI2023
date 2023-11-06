@@ -228,6 +228,11 @@
     <Content Include="Areas\Seguranca\Views\PapelAdmin\Index.cshtml" />
     <Content Include="Areas\Seguranca\Views\PapelAdmin\Create.cshtml" />
     <Content Include="Areas\Seguranca\Views\PapelAdmin\Edit.cshtml" />
+    <Content Include="Areas\Carrinho\Views\web.config" />
+    <Content Include="Areas\Carrinho\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Carrinho\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Carrinho\Views\Carrinhos\Create.cshtml" />
+    <Content Include="Areas\Carrinho\Views\Carrinhos\_ItensCarrinho.cshtml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -262,6 +267,8 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Cadastros\CadastrosAreaRegistration.cs" />
+    <Compile Include="Areas\Carrinho\CarrinhoAreaRegistration.cs" />
+    <Compile Include="Areas\Carrinho\Controllers\CarrinhosController.cs" />
     <Compile Include="Areas\Seguranca\Controllers\AccountController.cs" />
     <Compile Include="Areas\Seguranca\Controllers\AdminController.cs" />
     <Compile Include="Areas\Seguranca\Controllers\PapelAdminController.cs" />
@@ -329,6 +336,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Cadastros\Data\" />
     <Folder Include="Areas\Cadastros\Views\Shared\" />
+    <Folder Include="Areas\Carrinho\Data\" />
     <Folder Include="Areas\Tabelas\Data\" />
     <Folder Include="Areas\Tabelas\Views\Shared\" />
   </ItemGroup>

@@ -44,7 +44,7 @@
 {
     <div class="alert alert-success" role="alert">
         <p>Produtos por Fabricante</p>
-        @Html.Partial("~/Views/Produtos/_PorFabricante.cshtml", Model.produtos.ToList())
+        @Html.Partial("~/Areas/Cadastros/Views/Produtos/_PorFabricante.cshtml", Model.produtos.ToList())
     </div>
 }
 
@@ -52,6 +52,6 @@
 {
     <div class="alert alert-success" role="alert">
         <p>Produtos por Categoria</p>
-        @Html.Partial("~/Views/Produtos/_PorCategoria.cshtml", Model.produtos.ToList())
+        @Html.Partial("~/Areas/Cadastros/Views/Produtos/_PorCategoria.cshtml", Model.produtos.ToList())
     </div>
 }
